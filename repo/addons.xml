@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon id="plugin.video.Real.stream"
+       name="[COLOR fuchsia]Real Stream[/COLOR]"
+       version="0.5.6"
+       provider-name="Netai">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.simple.downloader" version="1.9.5"/>
+	<import addon="plugin.program.favoritos-realstream" version="1.0.2"/>
+    <import addon="script.module.urlresolver" version="5.0.0"/>
+	<import addon="script.module.resolveurl" version="5.0.0"/>
+    <import addon="script.extendedinfo" optional="true"/>
+	<import addon="script.mantenimiento" optional="true"/>
+    <import addon="plugin.video.youtube" />
+
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="run.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="es">Libreria de tus peliculas.</summary>
+    <language>es</language>
+    <description lang="es">Visiona peliculas procedentes de internet en tu dispositivo. Este script no aloja contenido protegido en su interior. Es totalmente gratuito.
+	Cambios en esta version: Se ha adaptado el script dependencia ResolveURL de Jsergio. Se han eliminado categorias redundantes. Ahora se puede hacer busquedas por años, director, actor o servidor.
+	Agregado apartado de videotutoriales.
+	</description>
+     <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="repository.Netai" name="[COLOR red]Netai[/COLOR] Repo" version="1.2.1" provider-name="Netai">
+    <requires>
+        <import addon="xbmc.addon" version="12.0.0"/>
+    </requires>
+    <extension point="xbmc.addon.repository" name="Netai-repo">
+		<info>https://raw.githubusercontent.com/Andorth/Repo/master/repositorio/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/Andorth/Repo/master/repositorio/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/Andorth/Repo/master/repositorio/</datadir>
+	</extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Repositorio Grupo Netai</summary>
+        <description>Soporte de los addon activos del grupo Netai y sus dependencias.</description>
+        <disclaimer>Estos addons son gratuitos no pagues por ellos.</disclaimer>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="repository.Realstream" name="[COLOR orange]Realstream[/COLOR] Repo" version="1.2.5" provider-name="Netai">
+
+    <extension point="xbmc.addon.repository" name="Realstream-repo">
+		<info>https://raw.githubusercontent.com/Andorth/Realstream-addon/master/repo/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/Andorth/Realstream-addon/master/repo/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/Andorth/Realstream-addon/master/repo/</datadir>
+	</extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Repositorio Real Stream</summary>
+        <description>Soporte del addon Real Stream.</description>
+        <disclaimer>Este addon es gratuito, no pagues por el.</disclaimer>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="repository.xbmchub" name="TVADDONS.CO Add-on Repository" version="3.0.0" provider-name="tvaddons">
+	<extension point="xbmc.addon.repository" name="TVADDONS.CO Add-on Repository">
+	<dir>
+		<info compressed="false">https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/addons.xml</info>
+		<checksum>https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/zips/</datadir>
+	</dir>
+
+    <dir>
+		<info compressed="false">https://github.com/tvaddonsco/tva-release-repo/raw/master/addons.xml</info>
+		<checksum>https://github.com/tvaddonsco/tva-release-repo/raw/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://github.com/tvaddonsco/tva-release-repo/raw/master/</datadir>
+    </dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Unofficial Kodi Addons from TVADDONS.CO</summary>
+		<description>Unofficial Kodi Addons from the TVADDONS.CO Add-on Repository. Please visit www.tvaddons.co for support!
+
+Kodi is a registered trademark of the XBMC Foundation. We are not connected to or in any other way affiliated with Kodi, Team Kodi, or the XBMC Foundation.</description>
+         <disclaimer>TVADDONS.CO did not make all the add-ons in this repository and is not responsible for their content.</disclaimer>
+		<platform>all</platform>
+                <forum>https://www.tvaddons.co/forums</forum>
+                <website>https://www.tvaddons.co</website>
+	</extension>
+</addon>
+</addons>
